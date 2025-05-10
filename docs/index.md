@@ -11,5 +11,9 @@ It serves as the basis for the examples in the [Programming by Stealth](https://
 
 ## Site Pages
 
-* [About](about)
-* [Links](links)
+{%- assign list_pages = site.html_pages | where_exp: "item", "item.title != 'Home'" %}
+{%- for p in list_pages %}
+- [{{ p.title }}]({{ p.url | relative_url }})
+{%- else %}
+- *No pages yet*
+{%- endfor %}
