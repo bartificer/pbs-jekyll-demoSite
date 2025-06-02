@@ -31,7 +31,7 @@
               <div class="navbar-nav">
                 {%- assign nav_pages = site.html_pages | where_exp: "item", "item.title != 'Home'" %}
                 {%- for p in nav_pages %}
-                <a class="nav-link {%- if p.url == page.url %} active{% endif %}" aria-current="page" href="{{ p.url | relative_url }}">{{ p.title }}</a>
+                <a class="nav-link {%- if p.url == page.url %} active{% endif %}" {%- if p.url == page.url %} aria-current="page"{% endif %} href="{{ p.url | relative_url }}">{{ p.title }}</a>
                 {%- endfor %}
               </div>
             </div>
