@@ -1,12 +1,11 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ page.title }} | {{ site.title }}</title>
+  {%- comment %}Include the snippet with the standard content for the head tag{% endcomment %}
+  {%  include html_head_common.html %}
 
-  {%- comment %}Include Bootstrap 5 compiled CSS{% endcomment %}
-  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  {%- comment %}Default to a title consisting of the page title and site title{% endcomment %}
+  <title>{{ page.title }} | {{ site.title }}</title>
 </head>
 <body>
   <div class="container">
@@ -48,7 +47,7 @@
     </div>
   </div>
 
-  {%- comment %}Include Bootstrap 5 JavaScript{% endcomment %}
-  <script src="{{ '/assets/js/bootstrap.bundle.min.js' | relative_url }}"></script>
+  {%- comment %}Include the standard body-end snippet{% endcomment %}
+  {% include html_body_end.html %}
 </body>
 </html>
