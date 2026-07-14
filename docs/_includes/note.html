@@ -1,0 +1,15 @@
+<div class="card text-bg-light">
+  {%- if include.title %}
+  <div class="card-header">
+    {{ include.title }}
+  </div>
+  {%- endif %}
+  <div class="card-body">
+    <div class="card-text">{{ include.content | markdownify }}</div>
+  </div>
+  {%- if include.info_url %}
+  <div class="card-footer text-end">
+    <a href="{{ include.info_url }}" class="card-link" target="_blank">more …</a>
+  </div>
+  {%- endif %}
+</div>
