@@ -6,3 +6,25 @@
     
   {%- comment %}Include Bootstrap 5 compiled CSS{% endcomment %}
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+
+  {%- comment %}Add the SEO & OpenGraph meta tags{% endcomment %}
+  <meta property="og:site_name" content="{{ site.title }}">
+  {%- if site.meta.author %}
+  <meta name="author" content="{{ site.meta.author }}">
+  {%- endif %}
+  {%- if site.meta.og_locale %}
+  <meta property="og:locale" content="{{ site.meta.og_locale }}">
+  {%- endif %}
+  <meta name="generator" content="Jekyll">
+  {%- if site.meta.og_type %}
+  <meta property="og:type" content="{{ site.meta.og_type }}">
+  {%- endif %}
+  {%- if site.meta.og_image %}
+  <meta property="og:image" content="{{ site.meta.og_image | absolute_url }}">
+  {%- endif %}
+  <meta property="og:title" content="{{ site.title }}: {{ page.title }}">
+  {%- if page.meta.description %}
+  <meta name="description" content="{{ page.meta.description }}">
+  <meta property="og:description" content="{{ page.meta.description }}">
+  {%- endif %}
+  <meta property="og:url" content="{{ page.url | absolute_url }}">

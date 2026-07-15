@@ -1,6 +1,8 @@
 ---
 title: Home
 layout: front_page
+meta:
+  description: The landing page for a demo website with no meaninful content!
 ---
 This is a [Jekyll](https://jekyllrb.com)-powered website designed to be tested locally and deployed on [GitHub Pages](https://pages.github.com).
 

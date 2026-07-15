@@ -10,3 +10,10 @@ autoprefixer:
   browsers:
     - last 4 versions
     - Safari > 2
+
+# Set the site-wide SEO and OpenGraph metadata
+meta:
+  author: Bart Busschots
+  locale: en_IE
+  og_type: website
+  og_image: assets/siteIllustration.png

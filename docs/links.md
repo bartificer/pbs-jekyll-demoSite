@@ -1,5 +1,7 @@
 ---
 title: Links
+meta:
+  description: A list of links that might be useful when developing a Jekyll site on GitHub Pages.
 ---
 # Useful Links
 

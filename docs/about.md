@@ -1,5 +1,7 @@
 ---
 title: About
+meta:
+  description: An explanation of the PBS Jekyll demo site.
 ---
 # About this Site
 
