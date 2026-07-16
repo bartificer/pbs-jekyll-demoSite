@@ -1,5 +1,6 @@
 ---
 title: Some Classic April Fools
+category: humour
 ---
 Over the years the BBC have done some of my very favourite April Fools gags:
 
