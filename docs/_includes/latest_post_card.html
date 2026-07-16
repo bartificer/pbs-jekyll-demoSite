@@ -1,0 +1,14 @@
+{%- comment %}Store the latest post in a variable{% endcomment %}
+{%- assign latest_post = site.posts | first %}
+
+{%- comment %}Build the card{% endcomment %}
+<div class="card text-bg-light">
+  <div class="card-header">
+    Latest Blog Post — {{ latest_post.date | date: "%B %d, %Y" }}
+  </div>
+  <div class="card-body">
+    <h1 class="card-title h5">{{ latest_post.title }}</h1>
+    <p class="card-text">{{ latest_post.excerpt }}</p>
+    <a href="{{ latest_post.url | relative_url }}" class="card-link">more …</a>
+  </div>
+</div>
