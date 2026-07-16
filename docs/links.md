@@ -1,10 +1,9 @@
 ---
-title: Links
+title: Useful Links
+short_title: Links
 meta:
   description: A list of links that might be useful when developing a Jekyll site on GitHub Pages.
 ---
-# Useful Links
-
 Some links you may find useful while working with Jekyll on GitHub Pages
 
 * [The GitHub Pages Documentation](https://docs.github.com/en/pages)
