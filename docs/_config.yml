@@ -17,3 +17,9 @@ meta:
   locale: en_IE
   og_type: website
   og_image: assets/siteIllustration.png
+
+# Define site collections
+collections:
+  socialmedia_profiles:
+    output: false
+    sort_by: sort_order
