@@ -1,6 +1,7 @@
 ---
 title: Some Amazing Female Scientists
 category: science
+tags: [ scientists, diversity ]
 ---
 If you ask a random stranger on the street to name a female scientist you'll almost always get the same answer *Marie Curie*. She was, without a doubt, a great scientist, and indeed a female, but she's just one of countless many super scientists who happen to be female.
 
