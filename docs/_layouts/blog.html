@@ -8,7 +8,7 @@ layout: default
 {%- comment %}
 Loop over the existing blog categories and create a card for each.
 {%- endcomment %}
-<div class="row row-cols-1 row-cols-md-2 g-4">
+<div class="row row-cols-1 row-cols-md-2 g-4 mt-3">
   {% for category in site.categories %}
   <div class="col">
     <div class="card text-bg-light">
@@ -34,4 +34,14 @@ Loop over the existing blog categories and create a card for each.
     </div>
   </div>
   {% endfor %}
+</div>
+
+{%- comment %}Add a statistics card{% endcomment %}
+<div class="card mt-5 text-bg-light text-muted small">
+  <div class="card-body"> ℹ️
+    There are {{ site.posts | size }} posts in {{ site.categories | size }} categories with {{ site.tags | size }} unique tags.
+    {%- assign first_post = site.posts | last %}
+    {%- assign recent_post = site.posts | first %}
+    The first post was published on {{ first_post.date | date: "%B %d, %Y" }}, and the most recent on {{ recent_post.date | date: "%B %d, %Y" }}.
+  </div>
 </div>
