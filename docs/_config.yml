@@ -22,3 +22,14 @@ meta:
 collections:
   socialmedia_profiles:
     output: false
+  recipes:
+    output: true
+    permalink: /:collection/:title
+
+# Configure front matter defaults
+defaults:
+  - scope:
+      path: ""
+      type: recipes
+    values:
+      layout: recipe

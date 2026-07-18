@@ -1,0 +1,61 @@
+---
+layout: default
+---
+<div class="container">
+  <div class="row mb-5">
+    <div class="col-12">
+      <h1 class="display-1 mb-0">{{ page.title }}</h1>
+      <div><small class="text-muted"><strong>Serves:</strong> {{ page.serves }}</small></div>
+
+      {% if page.description %}
+      <p class="lead mt-2 mb-0">{{ page.description }}</p>
+      {% endif %}
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 col-lg-4">
+      <div class="col">
+        <div class="card">
+          <div class="card-header">
+            Ingredients
+          </div>
+          <ul class="list-group list-group-flush">
+            {%- for ingredient in page.ingredients %}
+            <li class="list-group-item">{{ ingredient }}</li>
+            {%- endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-lg-8">
+      <div class="col mb-4">
+        <div class="card">
+          <div class="card-header">
+            Instructions
+          </div>
+          <div class="card-body">
+            <div class="card-text">
+              {{ content}}
+            </div>
+          </div>
+        </div>
+      </div>
+      {%- if page.serving_suggestions %}
+      <div class="col mb-4">
+        <div class="card">
+          <div class="card-header">
+            Serving Suggestions
+          </div>
+          <div class="card-body">
+            <ul>
+              {%- for suggestion in page.serving_suggestions %}
+              <li>{{ suggestion | markdownify }}</li>
+              {%- endfor %}
+            </ul>
+          </div>
+        </div>
+      </div>
+      {%- endif %}
+    </div>
+  </div>
+</div>
