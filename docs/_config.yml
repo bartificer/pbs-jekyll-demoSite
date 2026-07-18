@@ -22,4 +22,3 @@ meta:
 collections:
   socialmedia_profiles:
     output: false
-    sort_by: sort_order
