@@ -1,0 +1,20 @@
+---
+layout: default
+---
+<dl>
+  {%- for prize in site.data.nobel_prizes %}
+  <dt>{{ prize.awardYear}} — {{ prize.category.en }}</dt>
+  <dd>
+    {%- if prize.topMotivation.en %}
+    <p><strong>Note:</strong> {{ prize.topMotivation.en }}</p>
+    {%- endif %}
+    {%- if prize.laureates %}
+    <ol>
+      {%- for laureate in prize.laureates %}
+      <li><strong>{{ laureate.knownName.en | default: laureate.orgName.en }}</strong>{% if laureate.motivation.en %} — {{ laureate.motivation.en }}{% endif %}</li>
+      {%- endfor %}
+    </ol>
+    {%- endif %}
+  </dd>
+  {%- endfor %}
+</dl>
