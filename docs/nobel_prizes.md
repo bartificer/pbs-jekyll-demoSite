@@ -2,6 +2,7 @@
 layout: nobel_prizes
 title: The Nobel Prizes
 short_title: Nobel Prizes
+permalink: /nobels/
 date: 2026-07-20
 more_info_url: https://www.nobelprize.org/about-the-nobel-prize/
 ---
