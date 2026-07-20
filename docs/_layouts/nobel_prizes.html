@@ -1,10 +1,28 @@
 ---
 layout: default
 ---
+<header class="mb-4">
+  <h1 class="display-1 mb-0">{{ page.title }}</h1>
+  <p class="my-0"><small class="text-muted">Snapshotted from <a href="https://www.nobelprize.org/about/developer-zone-2/" target="_blank">the Nobel Prize API</a> on {{ page.date | date: "%B %d, %Y" }}</small></p>
+</header>
+
+<div class="card mb-4 bg-info-subtle text-info-emphasis">
+  <div class="card-header">
+    ℹ️ About {{ page.title}}
+  </div>
+  <div class="card-body">
+    <div class="card-text">{{ content }}</div>
+    {% if page.more_info_url %}
+    <a href="{{ page.more_info_url }}" target="_blank" class="card-link link-underline link-underline-opacity-0">More …</a>
+    {% endif %}
+  </div>
+</div>
+
+<h1>All Awarded Prizes</h1>
 <dl>
   {%- for prize in site.data.nobel_prizes %}
   <dt>{{ prize.awardYear}} — {{ prize.category.en }}</dt>
-  <dd>
+  <dd class="ps-3">
     {%- if prize.topMotivation.en %}
     <p><strong>Note:</strong> {{ prize.topMotivation.en }}</p>
     {%- endif %}
