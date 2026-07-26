@@ -16,8 +16,10 @@
   <meta property="og:locale" content="{{ site.meta.og_locale }}">
   {%- endif %}
   <meta name="generator" content="Jekyll">
-  {%- if site.meta.og_type %}
-  <meta property="og:type" content="{{ site.meta.og_type }}">
+  {%- if page.collection == 'posts' or page.collection == 'recipes' %}
+  <meta property="og:type" content="article">
+  {%- else %}
+  <meta property="og:type" content="website">
   {%- endif %}
   {%- if site.meta.og_image %}
   <meta property="og:image" content="{{ site.meta.og_image | absolute_url }}">
@@ -28,3 +30,11 @@
   <meta property="og:description" content="{{ page.meta.description }}">
   {%- endif %}
   <meta property="og:url" content="{{ page.url | absolute_url }}">
+  {%- assign _empty_array = '' | split: ',' %}
+  {%- assign category_keywords = page.categories | default: _empty_array %}
+  {%- assign tag_keywords = page.tags | default: _empty_array %}
+  {%- assign page_keywords = page.meta.keywords | default: _empty_array %}
+  {%- assign keywords = category_keywords | concat: tag_keywords | concat: page_keywords | uniq %}
+  {%- if keywords.size > 0 %}
+  <meta name="keywords" content="{{ keywords | join: ', ' }}">
+  {%- endif %}

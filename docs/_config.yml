@@ -15,7 +15,6 @@ autoprefixer:
 meta:
   author: Bart Busschots
   locale: en_IE
-  og_type: website
   og_image: assets/siteIllustration.png
 
 # Define site collections
@@ -33,3 +32,8 @@ defaults:
       type: recipes
     values:
       layout: recipe
+      meta:
+        keywords:
+          - recipe
+          - cooking
+          - food
